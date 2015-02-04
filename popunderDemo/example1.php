@@ -1,2 +1,2 @@
 <?php
-	echo "Popunder-Test mit JavaScript";
+	echo "Popunder-Test mit JavaScript - ein Test!";
