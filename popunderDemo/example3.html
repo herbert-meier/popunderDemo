@@ -18,12 +18,22 @@
 			{
 				rightBrowser=true;
 			}
+			else if (ua.indexOf("Edge")>-1)
+			{
+				rightBrowser=true;
+			}
 			else if (ua.indexOf("Chrome")>-1)
 			{
 				rightBrowser=true;
 			}
+			else if (ua.indexOf("MSIE")>-1)
+			{
+				//IE<11
+				rightBrowser=true;
+			}
 			else if (ua.indexOf("Trident")>-1)
 			{
+				//IE>=11
 				rightBrowser=true;
 			}
 		}
