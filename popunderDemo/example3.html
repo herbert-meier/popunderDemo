@@ -8,7 +8,7 @@
 
 	function checkClick(target, tag)
 	{
-		var rightBrowser=false;
+		var compatibleBrowser=false;
 		var ua=navigator.userAgent;
 		
 		//optimal ist das nicht
@@ -16,29 +16,29 @@
 		{
 			if (ua.indexOf("Firefox")>-1)
 			{
-				rightBrowser=true;
+				compatibleBrowser=true;
 			}
 			else if (ua.indexOf("Edge")>-1)
 			{
-				rightBrowser=true;
+				compatibleBrowser=true;
 			}
 			else if (ua.indexOf("Chrome")>-1)
 			{
-				rightBrowser=true;
+				compatibleBrowser=true;
 			}
 			else if (ua.indexOf("MSIE")>-1)
 			{
 				//IE<11
-				rightBrowser=true;
+				compatibleBrowser=true;
 			}
 			else if (ua.indexOf("Trident")>-1)
 			{
 				//IE>=11
-				rightBrowser=true;
+				compatibleBrowser=true;
 			}
 		}
 		
-		if (rightBrowser)
+		if (compatibleBrowser)
 		{
 			href=tag.getAttribute('href');		
 			tag.setAttribute("href",target);
