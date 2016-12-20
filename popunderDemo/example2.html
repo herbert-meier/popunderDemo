@@ -6,11 +6,11 @@
 
 <script type="text/javascript">
 
-	function checkClick(target, tag)
+	function checkClick(target, object)
 	{
 		//href und onclick vertauschen:
 		href=tag.getAttribute('href');		
-		tag.setAttribute("href",target);
+		object.setAttribute("href",target);
 		window.open(href,"_blank");
 	}
 	

@@ -6,7 +6,7 @@
 
 <script type="text/javascript">
 
-	function checkClick(target, tag)
+	function checkClick(target, object)
 	{
 		var compatibleBrowser=false;
 		var ua=navigator.userAgent;
@@ -41,7 +41,7 @@
 		if (compatibleBrowser)
 		{
 			href=tag.getAttribute('href');		
-			tag.setAttribute("href",target);
+			object.setAttribute("href",target);
 			window.open(href,"_blank");
 		}
 	}
