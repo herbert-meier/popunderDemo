@@ -1,2 +1,61 @@
-<?php
-	echo "test3 - Update 4";
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Example 1</title>
+
+<script type="text/javascript">
+
+	function checkClick(target, tag)
+	{
+		var rightBrowser=false;
+		var ua=navigator.userAgent;
+		
+		//optimal ist das nicht
+		if (ua.indexOf("Windows")>-1)
+		{
+			if (ua.indexOf("Firefox")>-1)
+			{
+				rightBrowser=true;
+			}
+			else if (ua.indexOf("Chrome")>-1)
+			{
+				rightBrowser=true;
+			}
+			else if (ua.indexOf("Trident")>-1)
+			{
+				rightBrowser=true;
+			}
+		}
+		
+		if (rightBrowser)
+		{
+			href=tag.getAttribute('href');		
+			tag.setAttribute("href",target);
+			window.open(href,"_blank");
+		}
+	}
+	
+</script>
+
+
+</head>
+
+
+<body>
+<h1>Beispiel 3 - erweiteter Lösungsansatz</h1>
+
+<p>
+Da dies bei mobilen Browsern keinen Sinn macht und nur bei Windows funktioniert
+wird das "vertauschen" der URL noch bei Desktop-Windows-Systemen mit IE, Chrome oder Firefox
+ausgeführt. 
+</p>
+
+<ul>
+<li><a href="pageA.html" onclick="checkClick('popunder.html',this)">Seite A</a></li>
+<li><a href="pageB.html" onclick="checkClick('popunder.html',this)">Seite B</a></li>
+<li><a href="pageC.html" onclick="checkClick('popunder.html',this)">Seite C</a></li>
+</ul>
+
+</body>
+</html>
